@@ -1,3 +1,3 @@
-from weather import get_infos
+from daily_news import get_infos
 
 get_infos()

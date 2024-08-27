@@ -1,1 +1,0 @@
-from .weather_api_client import get_infos

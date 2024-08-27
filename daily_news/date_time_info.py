@@ -1,20 +1,5 @@
-from datetime import datetime
 import locale
-import pyttsx3 as pyt
-
-
-# weather info (max and min degree, current degree, feels degree, description)
-# say to good bye
-def get_infos():
-    engine = init_text_to_speech_engine()
-    get_date_and_time_info(engine)
-
-
-def init_text_to_speech_engine():
-    engine = pyt.init('nsss')
-    engine.setProperty('rate', 150)
-    engine.setProperty('voice', 'com.apple.speech.synthesis.voice.yelda.premium')
-    return engine
+from datetime import datetime
 
 
 def get_date_and_time_info(engine):
