@@ -12,7 +12,6 @@ def get_weather_infos(engine):
         engine.say(f"{city} ili için hava bilgileri şu şekildedir")
         engine.say(f"mevcut sıcaklık {data['main']['temp']}°C")
         engine.say(f"hissedilen sıcaklık {data['main']['feels_like']}°C")
-        engine.say(f"hissedilen sıcaklık {data['main']['feels_like']}°C")
         engine.say(f"maksimum sıcaklık {data['main']['temp_max']}°C")
         engine.say(f"minimum sıcaklık {data['main']['temp_min']}°C")
         engine.say(f"Hava {data['weather'][0]['description']}")
