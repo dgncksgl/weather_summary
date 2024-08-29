@@ -2,6 +2,12 @@ import platform
 
 import pyttsx3 as pyt
 
+DRIVER = {
+    'Linux': 'espeak',
+    'Darwin': 'nsss',
+    'Windows': 'sapi5'
+}
+
 
 def init_text_to_speech_engine():
     engine = pyt.init(get_engine_driver_by_os())
@@ -10,11 +16,6 @@ def init_text_to_speech_engine():
     return engine
 
 
-def get_engine_driver_by_os():
+def get_engine_driver_by_os() -> str:
     sys_platform = platform.system()
-    if sys_platform == 'Linux':
-        return 'espeak'
-    elif sys_platform == 'Darwin':
-        return 'nsss'
-    elif sys_platform == 'Windows':
-        return 'sapi5'
+    return DRIVER[sys_platform]
